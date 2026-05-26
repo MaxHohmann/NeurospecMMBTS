@@ -8,7 +8,7 @@ This repository contains Python functions to use the ([MMBT-S Trigger Box](https
 
 1. Define port object (once in the beginning of the experiment):
 
-    mmbts = MMBTS()
+    "mmbts = MMBTS()"
 
 
 2. Open port to MMBT-S (once in the beginning of the experiment):
