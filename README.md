@@ -21,7 +21,7 @@ mmbts.open_port("COM5")
 ```python
 mmbts.send_trigger(10)
 ```
-    
+
 4. Close port to MMBT-S (once at the end of the experiment):
 ```python
 mmbts.close_port()
