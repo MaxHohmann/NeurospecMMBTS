@@ -39,8 +39,8 @@ MMBTS.show_ports()
 
 ## Requirements
 
-- Python >= 3.8
-- pyserial >= 3.5
+- [Python (3.8+)](https://www.python.org/downloads/)
+- [pySerial (3.5+)](https://pypi.org/project/pyserial/)
 
 
 
