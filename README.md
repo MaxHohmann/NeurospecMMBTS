@@ -12,19 +12,19 @@ mmbts = MMBTS()
 ```
 
 
-3. Open port to MMBT-S (once in the beginning of the experiment):
+2. Open port to MMBT-S (once in the beginning of the experiment):
 ```python
 mmbts.open_port("COM5")
 ```
 
 
-4. Send triggers to EEG system (during the experiment):
+3. Send triggers to EEG system (during the experiment):
 ```python
 mmbts.send_trigger(10)
 ```
 
     
-5. Close port to MMBT-S (once at the end of the experiment):
+4. Close port to MMBT-S (once at the end of the experiment):
 ```python
 mmbts.close_port()
 ```
