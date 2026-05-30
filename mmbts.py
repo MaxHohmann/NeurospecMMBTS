@@ -9,8 +9,8 @@ The class supports:
 - Listing available serial ports for setup
 
 
-Version:    1.1
-Date:       26/05/2026  
+Version:    1.1.2
+Date:       30/05/2026  
 Author:     Maximilian Hohmann
             mhohmann@dpz.eu
             maximilian.hohmann@stud.uni-goettingen.de
@@ -27,43 +27,61 @@ class MMBTS:
 
         self.ser = None  # placeholder
 
-        print(f"MMBT-S\t: Assigned object ({self})")
+        print(f"MMBT-S\t: Assigned Trigger Box object ({self})")
 
 
     # ----------------------
     # OPEN PORT
     # ----------------------
-    def open_port(self, port):
+    def open_port(self, port=None):
 
         # check port input
         if port is None or port == "":
-            raise ValueError("MMBT-S\t: No port defined!")
+            raise ValueError("No port defined!")
+        
 
-        self.ser = serial.Serial(
-            port        = port, # change port accordingly
-            baudrate    = 9600  # default
-        )
+        # open port
+        try:
+            self.ser = serial.Serial(
+                port        = port, # change port accordingly
+                baudrate    = 9600  # default
+            )
 
-        self.ser.write(bytes([0]))
-        self.ser.setRTS(False)
-        self.ser.setDTR(False)
+            # use MMTB-S default settings
+            self.ser.write(bytes([0]))
+            self.ser.setRTS(False)
+            self.ser.setDTR(False)
 
-        print(f"MMBT-S\t: Opened port ({port})")
+            print(f"MMBT-S\t: Opened port ({port})")
+   
+        except serial.SerialException:
+            raise ValueError(f"Could not open port ({port})!") from None
+            # you should check port name, and installed drivers
 
-            
+    
     # ----------------------
     # SEND TRIGGER
     # ----------------------
-    def send_trigger(self, value):
+    def send_trigger(self, value=None):
 
         # check for port object
         if self.ser is None or not self.ser.is_open:
-            raise RuntimeError("MMBT-S\t: No open port found!")
+            raise ConnectionError("No opened port found!")
         
-        # check trigger value
-        if value < 0 or value > 255:
-            raise ValueError("MMBT-S\t: Trigger out of range!")
 
+        # check trigger value 
+        if value is None:
+            raise ValueError("No trigger value defined!")
+          
+        if not isinstance(value, int):
+            raise TypeError(f"Trigger value must be integer ({type(value)})")
+        
+        # only accept triggers within range (0 to 255)
+        if not (0 <= value <= 255):
+            raise ValueError(f"Trigger value out of range ({value})!")
+
+
+        # send trigger
         self.ser.write(bytes([value]))
 
 
@@ -74,9 +92,9 @@ class MMBTS:
 
         # check for port object
         if self.ser is None or not self.ser.is_open:
-            raise RuntimeError("MMBT-S\t: No open port found!")
+            raise ConnectionError("No open port found!")
         
-        port = self.ser.port
+        port = getattr(self.ser, "port", None)
 
         self.ser.write(bytes([0]))
         self.ser.close()
@@ -89,10 +107,10 @@ class MMBTS:
     # ----------------------
     @staticmethod
     def show_ports():
-
         ports = serial.tools.list_ports.comports()
 
         print("MMBT-S\t: Display list of available ports")
+
         for p in ports:
             print(p.device, p.description)
 
