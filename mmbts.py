@@ -188,7 +188,7 @@ class MMBTS:
 
         print("MMBT-S\t: list of available ports")
         for p in ports:
-            print(f"\t- {p.device}")
+            print(f"\t- {p.device}\t:{p.description}")
 
         return
 
