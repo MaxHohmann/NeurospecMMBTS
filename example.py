@@ -5,6 +5,10 @@
 Short example script on how to use the MMBTS functions within 
 an experiment. Experiment contains a short loop over trials in
 different conditions.
+
+Author:     Maximilian Hohmann
+            maximilian.hohmann@stud.uni-goettingen.de
+            https://github.com/MaxHohmann
 """
 
 

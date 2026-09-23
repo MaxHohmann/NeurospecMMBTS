@@ -21,8 +21,8 @@ trigger errors are still caught.
 Version:    1.1.3
 Date:       23/09/2026  
 Author:     Maximilian Hohmann
-            mhohmann@dpz.eu
             maximilian.hohmann@stud.uni-goettingen.de
+            https://github.com/MaxHohmann
 """
 
 
