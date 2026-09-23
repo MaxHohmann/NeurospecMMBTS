@@ -181,7 +181,7 @@ class MMBTS:
     @staticmethod
     def show_ports():
         """
-        Print device names od all available serial ports.
+        Print device names of all available serial ports.
         """
 
         ports = serial.tools.list_ports.comports()
