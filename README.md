@@ -14,7 +14,7 @@ mmbts = MMBTS()
 
 2. Open port to MMBT-S (once in the beginning of the experiment):
 ```python
-mmbts.open_port("COM5")                     # for running the experiment
+mmbts.open_port("COM5")                     # default
 mmbts.open_port("COM5", debugging=True)     # with predefined mode
 ```
 
