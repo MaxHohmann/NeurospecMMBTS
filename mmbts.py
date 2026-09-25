@@ -19,7 +19,7 @@ trigger errors are still caught.
 
 
 Version:    1.1.3
-Date:       23/09/2026  
+Date:       25/09/2026  
 Author:     Maximilian Hohmann
             maximilian.hohmann@stud.uni-goettingen.de
             https://github.com/MaxHohmann
@@ -45,7 +45,7 @@ class MMBTS:
         self.ser        = None
         self.debugging  = False
 
-        print(f"MMBT-S\t: assigned object ({self})")
+        print(f"MMBT-S: assigned object ({self})")
 
 
 
@@ -67,7 +67,7 @@ class MMBTS:
             # no real connection
             self.ser = None
 
-            print(f"MMBT-S\t: [debugging] simulate opened port")
+            print(f"MMBT-S: [debugging] simulate opened port!")
             return
 
 
@@ -88,7 +88,7 @@ class MMBTS:
             self.ser.setRTS(False)
             self.ser.setDTR(False)
 
-            print(f"MMBT-S\t: opened port ({port}) [debugging={self.debugging}]")
+            print(f"MMBT-S: opened port ({port})")
    
         except serial.SerialException:
             raise ValueError(f"Could not open port ({port})!") from None
@@ -128,7 +128,7 @@ class MMBTS:
             value = self._validate_trigger(value)
 
             # continue without hardware
-            print(f"MMBT-S\t: [debugging] simulate sent trigger! ({value})")
+            print(f"MMBT-S: [debugging] simulate sent trigger! ({value})")
             return
         
 
@@ -151,7 +151,7 @@ class MMBTS:
             # no port to close
             self.ser = None
 
-            print("MMBT-S\t: [debugging] simulate closed port")
+            print("MMBT-S: [debugging] simulate closed port!")
             return
         
 
@@ -168,7 +168,7 @@ class MMBTS:
             self.ser.write(RESET_TRIGGER)   # reset trigger
             self.ser.close()                # close port
 
-            print(f"MMBT-S\t: closed port ({port})")
+            print(f"MMBT-S: closed port ({port})")
 
         except serial.SerialException:
             raise ValueError(f"could not close port ({port})!") from None
@@ -181,14 +181,14 @@ class MMBTS:
     @staticmethod
     def show_ports():
         """
-        Print device names of all available serial ports.
+        Print device names od all available serial ports.
         """
 
         ports = serial.tools.list_ports.comports()
 
-        print("MMBT-S\t: list of available ports")
+        print("MMBT-S: list of available ports")
         for p in ports:
-            print(f"\t- {p.device}\t: {p.description}")
+            print(f"\t- {p.device}:\t{p.description}")
 
         return
 
