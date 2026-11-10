@@ -74,7 +74,7 @@ The folder `example_data` contains three data files recorded using the demo expe
 
 ## References
 
-Corresponding **MATLAB** functions for the Trigger Box can be found on the GitHub repository from **Dr. Niko Busch**: <br>
+Corresponding **MATLAB** functions for the MMBT-S Trigger Box can be found on the **GitHub repository** from **Dr. Niko Busch**: <br>
 https://github.com/nabusch/NeurospecTriggerBox
 
 <br>
