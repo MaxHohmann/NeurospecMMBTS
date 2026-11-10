@@ -40,14 +40,13 @@ MMBTS.show_ports()
 experiment_demo.py
 ```
 - demonstrates how to use the MMBT-S Trigger Box within an experiment to send event triggers during an experiment.
-
+<br>
 **Extraction Notebook** 
 ```python
 extraction_demo.ipynb
 ```
 - demonstrates how to extract trigger events from BioSemi BDF data files using [MNE-Python](https://mne.tools/stable/index.html) and aggregate events into a trial-level dataset. 
-
-
+<br>
 **Example Data**
 
 The folder **example_data** contains three data files that were recorded using the demo experiment with varying sampling rate:
