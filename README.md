@@ -3,7 +3,6 @@
 This repository contains Python functions to use the [MMBT-S Trigger Box](https://www.neurospec.com/products/mmbt-s) by **NEUROSPEC** to connect and send triggers to an EEG system. The Trigger Box serves as an USB-to-parallel port adapter, so that computers with serial port can be connected to EEG systems that usually require a parallel port. The Trigger Box appears as a serial COM port (installing the corresponding driver might be needed).
 <br><br><br>
 
-
 ## Workflow to use the MMBT-S Trigger Box:
 
 1. Define port object (once in the beginning of the experiment):
