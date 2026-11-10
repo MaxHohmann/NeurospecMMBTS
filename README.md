@@ -47,7 +47,6 @@ experiment_demo.py
 extraction_demo.ipynb
 ```
 - demonstrates how to extract trigger events from BioSemi BDF data files using [MNE-Python](https://mne.tools/stable/index.html) and aggregate events into a trial-level dataset. 
-
 <br>
 
 **Example Data**
@@ -60,13 +59,13 @@ NeurospecMMBTS/
     └── testdata_512Hz_09112026.bdf
 ```
 The folder `example_data` contains three data files recorded using the demo experiment at different sampling rates (512 Hz, 1024 Hz, and 2048 Hz).
+
 <br>
 
 ## Requirements
 
 - [Python (3.8+)](https://www.python.org/downloads/)
 - [pySerial (3.5+)](https://pypi.org/project/pyserial/)
-
 <br>
 
 ## References
