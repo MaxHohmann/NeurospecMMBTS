@@ -51,7 +51,7 @@ extraction_demo.ipynb
 
 **Example Data**
 ```python
-project/
+NeurospecMMBTS/
 │
 └── example_data/
     ├── testdata_1024Hz_09112026.bdf
