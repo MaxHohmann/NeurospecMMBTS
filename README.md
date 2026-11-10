@@ -1,6 +1,6 @@
 # NeurospecMMBTS
 
-This repository contains Python functions to use the [MMBT-S Trigger Box](https://www.neurospec.com/products/mmbt-s) by **NEUROSPEC** to connect and send triggers to an EEG system. The Trigger Box serves as an USB-to-parallel port adapter, so that computers with serial port can be connected to EEG systems that usually require a parallel port. The Trigger Box appears as a serial COM port (installing the corresponding driver might be needed).
+This repository contains Python functions to use the [MMBT-S Trigger Box](https://www.neurospec.com/products/mmbt-s) by **NEUROSPEC** to connect and send event triggers to an EEG system. The Trigger Box serves as an USB-to-parallel port adapter, allowing computers without a physical parallel port to send triggers via serial port. The Trigger Box appears as a serial COM port (installing the corresponding driver may be required).
 
 <br>
 
@@ -31,6 +31,7 @@ mmbts.close_port()
 ```python
 MMBTS.show_ports()
 ```
+
 <br>
 
 ## Examples
@@ -39,14 +40,16 @@ MMBTS.show_ports()
 ```python
 experiment_demo.py
 ```
-- demonstrates how to use the MMBT-S Trigger Box within an experiment to send event triggers during an experiment.
+- Demonstrates how to use the MMBT-S Trigger Box within an experiment to send event triggers.
+
 <br>
 
 **Extraction Notebook** 
 ```python
 extraction_demo.ipynb
 ```
-- demonstrates how to extract trigger events from BioSemi BDF data files using [MNE-Python](https://mne.tools/stable/index.html) and aggregate events into a trial-level dataset. 
+- Demonstrates how to extract trigger events from **BioSemi BDF data files** using [MNE-Python](https://mne.tools/stable/index.html) and aggregate them into a trial-level dataset.
+
 <br>
 
 **Example Data**
@@ -66,6 +69,7 @@ The folder `example_data` contains three data files recorded using the demo expe
 
 - [Python (3.8+)](https://www.python.org/downloads/)
 - [pySerial (3.5+)](https://pypi.org/project/pyserial/)
+
 <br>
 
 ## References
@@ -73,15 +77,25 @@ The folder `example_data` contains three data files recorded using the demo expe
 Corresponding **MATLAB** functions for the Trigger Box can be found on the GitHub repository from **Dr. Niko Busch**: <br>
 https://github.com/nabusch/NeurospecTriggerBox
 
+<br>
+
 Details about using **serial port** in Python can be found on the documentation website for **pySerial**: <br>
 https://pyserial.readthedocs.io/en/latest/
+
+<br>
 
 Any **further information** about the MMBT-S Trigger Box can be found on the **NEUROSPEC** website: <br>
 https://www.neurospec.com/products/mmbt-s
 
+<br>
+
 **YouTube** series on using the MMBT-S Trigger Box by **Neurospec**: <br>
 https://www.youtube.com/playlist?list=PLlqnpgURTieauXe2OMGoQrt98rZuPfOJJ
 
+<br>
+
 Information on the **BDF file format** by **BioSemi**: <br>
 https://www.biosemi.com/faq/file_format.htm
+
+<br>
 
