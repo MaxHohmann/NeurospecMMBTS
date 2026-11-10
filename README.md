@@ -40,7 +40,7 @@ MMBTS.show_ports()
 ```python
 experiment_demo.py
 ```
-- Demonstrates how to use the MMBT-S Trigger Box within an experiment to send event triggers.
+- Demonstrates how to use the MMBT-S Trigger Box to send event triggers during an experiment. 
 
 <br>
 
@@ -48,7 +48,7 @@ experiment_demo.py
 ```python
 extraction_demo.ipynb
 ```
-- Demonstrates how to extract trigger events from **BioSemi BDF data files** using [MNE-Python](https://mne.tools/stable/index.html) and aggregate them into a trial-level dataset.
+- Demonstrates how to extract trigger events from `BioSemi BDF data files` using [MNE-Python](https://mne.tools/stable/index.html) and aggregate them into a trial-level dataset.
 
 <br>
 
