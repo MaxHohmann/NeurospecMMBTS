@@ -11,23 +11,29 @@ This repository contains Python functions to use the [MMBT-S Trigger Box](https:
 mmbts = MMBTS()
 ```
 
+<br>
+
 2. Open port to MMBT-S (once in the beginning of the experiment):
 ```python
 mmbts.open_port("COM5")                     # for running the experiment
 mmbts.open_port("COM5", debugging=True)     # with predefined debugging mode
 ```
 
+<br>
+
 3. Send triggers to EEG system (during the experiment):
 ```python
 mmbts.send_trigger(10)
 ```
+
+<br>
 
 4. Close port to MMBT-S (once at the end of the experiment):
 ```python
 mmbts.close_port()
 ```
 
-<br>
+<br><br>
 
 **Additionally**, you can get a list of availablee ports by using:
 ```python
