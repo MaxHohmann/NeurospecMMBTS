@@ -47,6 +47,7 @@ experiment_demo.py
 extraction_demo.ipynb
 ```
 - demonstrates how to extract trigger events from BioSemi BDF data files using [MNE-Python](https://mne.tools/stable/index.html) and aggregate events into a trial-level dataset. 
+
 <br>
 
 **Example Data**
