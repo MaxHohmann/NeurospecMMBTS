@@ -30,9 +30,7 @@ mmbts.close_port()
 ```python
 MMBTS.show_ports()
 ```
-
-<br>
-
+<br><br><br>
 
 ## Requirements
 
