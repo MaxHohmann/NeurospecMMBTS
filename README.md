@@ -58,7 +58,7 @@ NeurospecMMBTS/
     ├── testdata_2048Hz_09112026.bdf
     └── testdata_512Hz_09112026.bdf
 ```
-- the folder **example_data** contains three data files that were recorded using the demo experiment with varying sampling rates
+The folder `example_data` contains three data files recorded using the demo experiment at different sampling rates (512 Hz, 1024 Hz, and 2048 Hz).
 <br>
 
 ## Requirements
