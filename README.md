@@ -50,11 +50,15 @@ extraction_demo.ipynb
 <br>
 
 **Example Data**
-
-The folder **example_data** contains three data files that were recorded using the demo experiment with varying sampling rate:
-- `testdata_1024Hz_09112026.bdf`
-- `testdata_2048Hz_09112026.bdf`
-- `testdata_512Hz_09112026.bdf`
+```python
+project/
+│
+└── example_data/
+    ├── testdata_1024Hz_09112026.bdf
+    ├── testdata_2048Hz_09112026.bdf
+    └── testdata_512Hz_09112026.bdf
+```
+- the folder **example_data** contains three data files that were recorded using the demo experiment with varying sampling rates
 <br>
 
 ## Requirements
