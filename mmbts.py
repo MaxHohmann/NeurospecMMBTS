@@ -7,7 +7,7 @@ This module provides code for using the MMBT-S Trigger Box
 
 The class supports:
 - opening serial connection to the trigger box
-- sending digital event markers (triggers)
+- sending digital event triggers
 - closing serial connection to the trigger box
 - listing available serial ports for setup
 
@@ -18,8 +18,8 @@ scripts can be run without actual connection to hardware while
 trigger errors are still caught.
 
 
-Version:    1.1.3
-Date:       25/09/2026  
+Version:    1.1.4
+Date:       09/11/2026  
 Author:     Maximilian Hohmann
             maximilian.hohmann@stud.uni-goettingen.de
             https://github.com/MaxHohmann
@@ -28,10 +28,6 @@ Author:     Maximilian Hohmann
 
 import serial
 import serial.tools.list_ports
-
-
-# byte value used for reset
-RESET_TRIGGER = bytes([0])
 
 
 class MMBTS:
@@ -78,17 +74,30 @@ class MMBTS:
 
         # open port
         try:
-            self.ser = serial.Serial(
-                port        = port,     # port name
-                baudrate    = 9600      # default
-            )
-
             # default settings
-            self.ser.write(RESET_TRIGGER)
+            self.ser = serial.Serial(
+                port            = port,                 # device path
+                baudrate        = 9600,
+                bytesize        = serial.EIGHTBITS,
+                parity          = serial.PARITY_NONE,
+                stopbits        = serial.STOPBITS_ONE,
+                timeout         = 0.5,
+                write_timeout   = 0.5,
+                xonxoff         = False,
+                rtscts          = False,
+                dsrdtr          = False
+            )
+            
+            self.ser.setDTR(True)
             self.ser.setRTS(False)
-            self.ser.setDTR(False)
+
+            # timeout values are only set to limit how long read/write operations
+            # can block the application in case of serial port issues (e.g. USB 
+            # diconnetcion or COM port failure).
+
 
             print(f"MMBT-S: opened port ({port})")
+
    
         except serial.SerialException:
             raise ValueError(f"Could not open port ({port})!") from None
@@ -165,8 +174,7 @@ class MMBTS:
 
         # close port
         try:            
-            self.ser.write(RESET_TRIGGER)   # reset trigger
-            self.ser.close()                # close port
+            self.ser.close()
 
             print(f"MMBT-S: closed port ({port})")
 
