@@ -79,9 +79,9 @@ https://pyserial.readthedocs.io/en/latest/
 Any further information about the MMBT-S Trigger Box can be found on the **NEUROSPEC** website: <br>
 https://www.neurospec.com/products/mmbt-s
 
-**YouTube** series on using the MMBT-S Trigger Box by **Neurospec**:
+**YouTube** series on using the MMBT-S Trigger Box by **Neurospec**: <br>
 https://www.youtube.com/playlist?list=PLlqnpgURTieauXe2OMGoQrt98rZuPfOJJ
 
-Information on the BDF file format by **BioSemi**:
+Information on the BDF file format by **BioSemi**: <br>
 https://www.biosemi.com/faq/file_format.htm
 
