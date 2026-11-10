@@ -33,7 +33,7 @@ mmbts.send_trigger(10)
 mmbts.close_port()
 ```
 
-<br><br>
+<br>
 
 **Additionally**, you can get a list of availablee ports by using:
 ```python
