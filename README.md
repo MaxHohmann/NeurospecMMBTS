@@ -73,15 +73,15 @@ The folder `example_data` contains three data files recorded using the demo expe
 Corresponding **MATLAB** functions for the Trigger Box can be found on the GitHub repository from **Dr. Niko Busch**: <br>
 https://github.com/nabusch/NeurospecTriggerBox
 
-Details about using serial port in Python can be found on the documentation website for **pySerial**: <br>
+Details about using **serial port** in Python can be found on the documentation website for **pySerial**: <br>
 https://pyserial.readthedocs.io/en/latest/
 
-Any further information about the MMBT-S Trigger Box can be found on the **NEUROSPEC** website: <br>
+Any **further information** about the MMBT-S Trigger Box can be found on the **NEUROSPEC** website: <br>
 https://www.neurospec.com/products/mmbt-s
 
 **YouTube** series on using the MMBT-S Trigger Box by **Neurospec**: <br>
 https://www.youtube.com/playlist?list=PLlqnpgURTieauXe2OMGoQrt98rZuPfOJJ
 
-Information on the BDF file format by **BioSemi**: <br>
+Information on the **BDF file format** by **BioSemi**: <br>
 https://www.biosemi.com/faq/file_format.htm
 
