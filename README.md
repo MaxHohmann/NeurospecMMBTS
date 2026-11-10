@@ -4,7 +4,7 @@ This repository contains Python functions to use the [MMBT-S Trigger Box](https:
 
 <br>
 
-## Workflow to use the MMBT-S Trigger Box:
+## Workflow to use the MMBT-S Trigger Box
 
 1. Define port object (once in the beginning of the experiment):
 ```python
@@ -33,10 +33,30 @@ MMBTS.show_ports()
 ```
 <br>
 
+## Examples
+
+```python
+experiment_demo.py
+```
+**experiment_demo.py** demonstrates how to use the MMBT-S Trigger Box within an experiment to send event triggers during an experiment.
+
+
+```python
+extraction_demo.py
+```
+**extraction_demo.ipynb** demonstrates how to extract trigger events from BioSemi BDF data files using [MNE-Python](https://mne.tools/stable/index.html) and aggregate events into a trial-level dataset. 
+
+The folder **example_data** contains three data files that were recorded using the demo experiment with varying sampling rate:
+- `testdata_1024Hz_09112026.bdf`
+- `testdata_2048Hz_09112026.bdf`
+- `testdata_512Hz_09112026.bdf`
+<br>
+
 ## Requirements
 
 - [Python (3.8+)](https://www.python.org/downloads/)
 - [pySerial (3.5+)](https://pypi.org/project/pyserial/)
+
 <br>
 
 ## References
@@ -49,4 +69,10 @@ https://pyserial.readthedocs.io/en/latest/
 
 Any further information about the MMBT-S Trigger Box can be found on the **NEUROSPEC** website: <br>
 https://www.neurospec.com/products/mmbt-s
+
+**YouTube** series on using the MMBT-S Trigger Box by **Neurospec**:
+https://www.youtube.com/playlist?list=PLlqnpgURTieauXe2OMGoQrt98rZuPfOJJ
+
+Information on the BDF file format by **BioSemi**:
+https://www.biosemi.com/faq/file_format.htm
 
